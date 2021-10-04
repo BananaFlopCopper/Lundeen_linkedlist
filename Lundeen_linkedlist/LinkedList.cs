@@ -29,7 +29,7 @@ namespace Lundeen_linkedlist
             Current = _head;
             while (Current != null)
             {
-                if(Current.Data.Contains(match))
+                if(Current.Data.ToLower().Contains(match.ToLower()))
                 { return Current; }
                 Current = Current.Next;
             }
@@ -52,7 +52,7 @@ namespace Lundeen_linkedlist
             }
             while (Current.Next != null)
             {
-                if (Current.Next.Data.Contains(match)) // very long
+                if (Current.Next.Data.ToLower().Contains(match.ToLower())) // very long
                 {
                     if (Current.Next.Next == null)
                     {
